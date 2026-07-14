@@ -8,7 +8,7 @@ export default function Footer() {
     >
       <div
         aria-hidden
-        className="absolute inset-0 bg-[url('/footer_bg.svg')] bg-contain bg-left bg-no-repeat pointer-events-none"
+        className="absolute inset-0 bg-[url('/footer_bg.svg')] bg-contain bg-center bg-no-repeat pointer-events-none"
       />
       <div className="relative max-w-full md:max-w-[80%] mx-auto px-4 md:px-6 py-16 md:py-24 flex flex-col items-center gap-6 text-center">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-medium leading-tight tracking-wide">
