@@ -8,7 +8,7 @@ export default function Hero() {
   return (
     <section className="max-w-full md:max-w-[80%] mx-auto px-4 md:px-6 py-12 md:py-24 flex flex-col md:flex-row items-center gap-10 md:gap-16">
       <div className="flex-1 space-y-6">
-        <h1 className="text-4xl sm:text-5xl md:text-7xl font-medium leading-tight tracking-tight">
+        <h1 className="text-4xl sm:text-5xl md:text-7xl font-medium leading-tight tracking-tight line-clamp-4">
           Ogoh Francis,
           <br />
           <span className="text-foreground">
