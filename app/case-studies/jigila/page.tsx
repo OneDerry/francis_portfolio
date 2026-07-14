@@ -42,17 +42,19 @@ export default function JigilaPage() {
         context={jigila_solution_context}
       />
       <ProjectGoalsSection goals={jigila_goals} />
-      <UsersSection statement={jigila_user_statement} needs={jigila_user_needs} />
+      <UsersSection
+        statement={jigila_user_statement}
+        needs={jigila_user_needs}
+      />
       <KeyExperiencesSection experiences={jigila_key_experiences} />
       <FinalDesignSection
-        images={[
-          "/jigila_img_one.png",
-          "/jigila_img_two.png",
-          "/jigila_img_three.png",
-        ]}
+        images={["/jigila_one.svg", "/jigila_two.svg", "/jigila_three.svg"]}
         imageAlt="Jigila Buy & Ship final design screen"
       />
-      <LiveLinkSection label="Live Link to Figma Files" url={jigila_figma_url} />
+      <LiveLinkSection
+        label="Live Link to Figma Files"
+        url={jigila_figma_url}
+      />
       <LiveLinkSection note="Currently under development" />
     </div>
   );

@@ -36,11 +36,7 @@ export default function CBTASPage() {
         context={cbtas_solution_context}
       />
       <FinalDesignSection
-        images={[
-          "/cbtas_web_img_one.png",
-          "/cbtas_web_image_two.png",
-          "/cbtas_web_img_three.png",
-        ]}
+        images={["/cbtas_one.svg", "/cbtas_two.svg", "/cbtas_three.svg"]}
         imageAlt="CBTAS Website final design screen"
       />
       <LiveLinkSection label="Live Link to Figma Files" url={cbtas_figma_url} />
