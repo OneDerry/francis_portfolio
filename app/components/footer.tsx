@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer
       id="contact"
-      className="relative bg-linear-to-b from-primary to-black text-primary-foreground overflow-hidden"
+      className="relative bg-linear-to-b from-[#016BD4] to-[#111827] text-primary-foreground overflow-hidden"
     >
       <div
         aria-hidden
