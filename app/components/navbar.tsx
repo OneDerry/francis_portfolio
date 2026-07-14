@@ -32,7 +32,12 @@ export default function Navbar() {
             </Link>
           ))}
         </nav>
-        <Button size="lg" className="hidden md:inline-flex gap-2">
+        <Button
+          size="lg"
+          className="hidden md:inline-flex gap-2"
+          nativeButton={false}
+          render={<a href="/Francis%20Ogoh%20CV1.pdf" download="Francis Ogoh CV.pdf" />}
+        >
           <ArrowDownToLine className="h-3.5 w-3.5" />
           Download CV
         </Button>
@@ -62,7 +67,13 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Button size="lg" className="gap-2 mt-2 w-full">
+          <Button
+            size="lg"
+            className="gap-2 mt-2 w-full"
+            nativeButton={false}
+            render={<a href="/Francis%20Ogoh%20CV1.pdf" download="Francis Ogoh CV.pdf" />}
+            onClick={() => setMenuOpen(false)}
+          >
             <ArrowDownToLine className="h-3.5 w-3.5" />
             Download CV
           </Button>

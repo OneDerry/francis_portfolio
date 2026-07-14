@@ -20,7 +20,12 @@ export default function Hero() {
           Product Designer focused on fintech, gov-tech, startups and enterprise
           systems.
         </p>
-        <Button size='lg' className="gap-2 rounded-xl">
+        <Button
+          size="lg"
+          className="gap-2 rounded-xl"
+          nativeButton={false}
+          render={<a href="#contact" />}
+        >
           Contact Me
           <ArrowRight className="h-4 w-4" />
         </Button>
