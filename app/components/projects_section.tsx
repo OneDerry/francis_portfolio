@@ -48,11 +48,13 @@ export default function ProjectsSection() {
 
         <div className="pt-8 space-y-5">
           {/* Wide card — text left, image right */}
-          <div className="bg-card border border-border py-6 md:py-8 rounded-3xl overflow-hidden flex flex-col md:flex-row">
+          <div className="bg-card shadow py-6 md:py-8 rounded-3xl overflow-hidden flex flex-col md:flex-row">
             <div className="flex-1 p-6 md:p-8 flex flex-col justify-between gap-6">
               <div className="space-y-4">
                 <ProjectTags tags={wide.tags} />
-                <h3 className="text-2xl md:text-3xl font-medium">{wide.title}</h3>
+                <h3 className="text-2xl md:text-3xl font-medium">
+                  {wide.title}
+                </h3>
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                   {wide.description}
                 </p>
@@ -83,7 +85,7 @@ export default function ProjectsSection() {
             {cards.map((project) => (
               <div
                 key={project.id}
-                className="bg-card border border-border rounded-3xl overflow-hidden flex flex-col"
+                className="bg-card shadow rounded-3xl overflow-hidden flex flex-col"
               >
                 {project.image ? (
                   <div className="relative h-52 w-full">
@@ -101,7 +103,9 @@ export default function ProjectsSection() {
                 <div className="p-6 flex flex-col gap-4 flex-1">
                   <ProjectTags tags={project.tags} />
                   <div className="space-y-2">
-                    <h3 className="text-2xl md:text-3xl font-medium">{project.title}</h3>
+                    <h3 className="text-2xl md:text-3xl font-medium">
+                      {project.title}
+                    </h3>
                     <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                       {project.description}
                     </p>
@@ -115,11 +119,13 @@ export default function ProjectsSection() {
           </div>
 
           {/* Featured — full width, text left, image right */}
-          <div className="bg-card border border-border p-4 md:p-8 rounded-3xl overflow-hidden flex flex-col md:flex-row">
+          <div className="bg-card shadow p-4 md:p-8 rounded-3xl overflow-hidden flex flex-col md:flex-row">
             <div className="flex-1 p-4 md:p-8 flex flex-col justify-between gap-6">
               <div className="space-y-4">
                 <ProjectTags tags={featured.tags} />
-                <h3 className="text-2xl md:text-3xl font-medium">{featured.title}</h3>
+                <h3 className="text-2xl md:text-3xl font-medium">
+                  {featured.title}
+                </h3>
                 <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                   {featured.description}
                 </p>
