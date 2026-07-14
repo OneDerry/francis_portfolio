@@ -62,13 +62,13 @@ export default function ProjectsSection() {
               </div>
             </div>
             {wide.image ? (
-              <div className="relative bg-black mx-6 md:mx-0 md:mr-8 rounded-2xl z-10 md:w-80 min-h-56 md:min-h-0 shrink-0">
+              <div className="relative bg-[#0D1B2E] mx-6 md:mx-0 md:mr-8 rounded-2xl z-10 md:w-80 min-h-56 md:min-h-0 shrink-0">
                 <Image
                   src={wide.image}
                   alt={wide.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 320px"
-                  className="object-cover"
+                  className="object-contain p-6 md:p-8"
                 />
               </div>
             ) : (
@@ -129,13 +129,13 @@ export default function ProjectsSection() {
               </div>
             </div>
             {featured.image ? (
-              <div className="relative w-full bg-[#A2D6C0] md:mr-8 rounded-2xl z-10 md:w-96 min-h-56 md:h-96 shrink-0">
+              <div className="relative w-full bg-linear-to-b from-[#83C8A0] to-[#4E9C6F] md:mr-8 rounded-2xl z-10 md:w-96 min-h-64 md:h-96 shrink-0 overflow-hidden">
                 <Image
                   src={featured.image}
                   alt={featured.title}
                   fill
                   sizes="(max-width: 480px) 100vw, 384px"
-                  className="object-cover"
+                  className="object-contain p-6 md:p-10 translate-x-[8%]"
                 />
               </div>
             ) : (
