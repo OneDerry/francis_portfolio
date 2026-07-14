@@ -3,10 +3,7 @@ import {
   Globe,
   Smartphone,
   Layers,
-  Phone,
   Camera,
-  Mail,
-  X,
   type LucideIcon,
 } from "lucide-react";
 
@@ -120,22 +117,22 @@ export const toolkit = [
 ];
 
 export type Contact = {
-  icon: LucideIcon;
+  icon: LucideIcon | string;
   label: string;
   href: string;
 };
 
 export const contacts: Contact[] = [
-  { icon: Phone, label: "08166967203", href: "tel:08166967203" },
+  { icon: "/telephone.svg", label: "08166967203", href: "tel:08166967203" },
   {
-    icon: Camera,
+    icon: '/instagram.svg',
     label: "@iam_franco",
     href: "https://instagram.com/iam_franco",
   },
   {
-    icon: Mail,
+    icon: "/mail.svg",
     label: "ogoh.francis@yahoo.com",
     href: "mailto:ogoh.francis@yahoo.com",
   },
-  { icon: X, label: "@franco1nc1", href: "https://x.com/franco1nc1" },
+  { icon: "/twitter.svg", label: "@franco1nc1", href: "https://x.com/franco1nc1" },
 ];

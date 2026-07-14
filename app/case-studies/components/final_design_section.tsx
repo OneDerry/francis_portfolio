@@ -5,6 +5,7 @@ type Props = {
   image?: string;
   images?: string[];
   imageAlt?: string;
+  frameBg?: string;
 };
 
 export default function FinalDesignSection({
@@ -12,6 +13,7 @@ export default function FinalDesignSection({
   image,
   images,
   imageAlt = "Final design",
+  frameBg,
 }: Props) {
   return (
     <section className="bg-background border-t border-border">
@@ -34,14 +36,14 @@ export default function FinalDesignSection({
             {images.map((src, i) => (
               <div
                 key={src}
-                className="relative rounded-3xl aspect-4/3 overflow-hidden"
+                className={`relative rounded-3xl aspect-4/3 overflow-hidden ${frameBg ?? ""}`}
               >
                 <Image
                   src={src}
                   alt={`${imageAlt} ${i + 1}`}
                   fill
                   sizes="(max-width: 768px) 100vw, 30vw"
-                  className="object-cover"
+                  className={frameBg ? "object-contain p-5 md:p-7" : "object-cover"}
                 />
               </div>
             ))}

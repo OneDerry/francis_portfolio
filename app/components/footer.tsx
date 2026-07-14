@@ -1,4 +1,5 @@
 import { contacts } from "@/lib/data";
+import Image from "next/image";
 
 export default function Footer() {
   return (
@@ -27,7 +28,17 @@ export default function Footer() {
               href={href}
               className="flex items-center gap-2 px-4 py-2.5 rounded-full hover:bg-primary-foreground/10 transition-colors text-lg"
             >
-              <Icon className="h-7 w-7 opacity-80" />
+              {typeof Icon === "string" ? (
+                <Image
+                  src={Icon}
+                  alt=""
+                  width={28}
+                  height={28}
+                  className="h-7 w-7 opacity-80"
+                />
+              ) : (
+                <Icon className="h-7 w-7 opacity-80" />
+              )}
               {label}
             </a>
           ))}
