@@ -129,13 +129,13 @@ export default function ProjectsSection() {
               </div>
             </div>
             {featured.image ? (
-              <div className="relative w-full bg-linear-to-b from-[#83C8A0] to-[#4E9C6F] md:mr-8 rounded-2xl z-10 md:w-96 min-h-64 md:h-96 shrink-0 overflow-hidden">
+              <div className="relative w-full bg-linear-to-b from-[#83C8A0] to-[#4E9C6F] rounded-2xl z-10 md:w-96 min-h-64 md:h-96 shrink-0 overflow-hidden">
                 <Image
                   src={featured.image}
                   alt={featured.title}
                   fill
                   sizes="(max-width: 480px) 100vw, 384px"
-                  className="object-contain p-6 md:p-10 translate-x-[8%]"
+                  className="object-contain p-6 md:p-10 translate-x-[10%]"
                 />
               </div>
             ) : (
