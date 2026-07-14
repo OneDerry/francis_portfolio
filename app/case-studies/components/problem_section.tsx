@@ -19,7 +19,7 @@ export default function ProblemSection({
             <p className="text-xs font-semibold tracking-widest uppercase">
               The Problem
             </p>
-            <h2 className="text-3xl sm:text-4xl md:text-7xl font-medium line-clamp-6 leading-tight tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-medium line-clamp-6 leading-tight tracking-tight">
               {statement}
             </h2>
             <p className="text-muted-foreground text-base md:text-xl leading-relaxed">

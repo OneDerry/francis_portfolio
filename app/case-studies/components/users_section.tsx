@@ -5,7 +5,7 @@ type Props = {
 
 export default function UsersSection({ statement, needs }: Props) {
   return (
-    <section className="bg-muted border-t border-border">
+    <section className="bg-[#F1F4F6] border-t border-border">
       <div className="max-w-full md:max-w-[80%] mx-auto px-4 md:px-6 py-16 md:py-24 space-y-12">
         <div className="space-y-6 text-center max-w-7xl mx-auto">
           <p className="text-xs font-semibold tracking-widest text-muted-foreground uppercase">
@@ -22,7 +22,7 @@ export default function UsersSection({ statement, needs }: Props) {
             {needs.map((need) => (
               <div
                 key={need}
-                className="bg-card border-x-2 border-x-primary text-center rounded-2xl px-5 py-6 text-sm font-medium"
+                className="bg-white border-x-2 border-x-primary text-center rounded-2xl px-5 py-6 text-sm font-medium"
               >
                 {need}
               </div>
