@@ -13,7 +13,7 @@ export default function LiveLinkSection({
 
   return (
     <section className="bg-background border-t border-border">
-      <div className="max-w-[90%] mx-auto px-6 py-16 space-y-3">
+      <div className="max-w-full md:max-w-[80%] mx-auto px-4 md:px-6 py-10 md:py-16 space-y-3">
         <p className="text-xs font-semibold tracking-widest text-muted-foreground uppercase">
           {label}
         </p>
@@ -22,12 +22,12 @@ export default function LiveLinkSection({
             href={url.startsWith("http") ? url : `https://${url}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="block text-2xl font-semibold break-all hover:text-primary transition-colors"
+            className="block text-sm font-semibold break-all hover:text-primary transition-colors"
           >
             {url}
           </a>
         ) : (
-          <p className="text-2xl font-semibold text-muted-foreground">{note}</p>
+          <p className="text-sm font-semibold text-muted-foreground">{note}</p>
         )}
       </div>
     </section>

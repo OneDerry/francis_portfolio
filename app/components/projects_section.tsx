@@ -12,7 +12,7 @@ function ProjectTags({ tags }: { tags: string[] }) {
         <Badge
           key={tag}
           variant="outline"
-          className="text-[10px] font-semibold tracking-wider px-2.5 py-0.5 rounded-full text-muted-foreground border-border"
+          className="text-xs font-medium bg-[#E2E9EC] tracking-wider px-4 py-4 rounded-full text-muted-foreground border-border"
         >
           {tag}
         </Badge>
@@ -23,7 +23,7 @@ function ProjectTags({ tags }: { tags: string[] }) {
 
 function CaseStudyButton({ href }: { href?: string }) {
   const btn = (
-    <Button size="sm" className="gap-2 rounded-full">
+    <Button size="lg" className="gap-2 rounded-xl">
       View Case Study
       <ArrowRight className="h-3.5 w-3.5" />
     </Button>
@@ -38,22 +38,22 @@ export default function ProjectsSection() {
 
   return (
     <section id="projects" className="bg-muted border-t border-border">
-      <div className="max-w-[90%] mx-auto px-6 py-24 space-y-4">
-        <p className="text-center text-xs font-semibold tracking-widest text-muted-foreground uppercase">
+      <div className="max-w-full md:max-w-[80%] mx-auto px-4 md:px-6 py-16 md:py-24 space-y-4">
+        <p className="text-center text-sm md:text-lg font-semibold tracking-widest text-muted-foreground uppercase">
           Projects
         </p>
-        <h2 className="text-center text-4xl font-bold tracking-tight">
+        <h2 className="text-center text-3xl md:text-4xl font-medium tracking-tight">
           Selected work.
         </h2>
 
         <div className="pt-8 space-y-5">
           {/* Wide card — text left, image right */}
-          <div className="bg-card border border-border rounded-3xl overflow-hidden flex flex-col md:flex-row">
-            <div className="flex-1 p-8 flex flex-col justify-between gap-6">
+          <div className="bg-card border border-border py-6 md:py-8 rounded-3xl overflow-hidden flex flex-col md:flex-row">
+            <div className="flex-1 p-6 md:p-8 flex flex-col justify-between gap-6">
               <div className="space-y-4">
                 <ProjectTags tags={wide.tags} />
-                <h3 className="text-2xl font-bold">{wide.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <h3 className="text-2xl md:text-3xl font-medium">{wide.title}</h3>
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                   {wide.description}
                 </p>
               </div>
@@ -62,7 +62,7 @@ export default function ProjectsSection() {
               </div>
             </div>
             {wide.image ? (
-              <div className="relative w-full md:w-80 min-h-56 md:min-h-0 shrink-0">
+              <div className="relative bg-black mx-6 md:mx-0 md:mr-8 rounded-2xl z-10 md:w-80 min-h-56 md:min-h-0 shrink-0">
                 <Image
                   src={wide.image}
                   alt={wide.title}
@@ -73,7 +73,7 @@ export default function ProjectsSection() {
               </div>
             ) : (
               <div
-                className={`${wide.image_bg} w-full md:w-80 min-h-56 md:min-h-0 shrink-0`}
+                className={`${wide.image_bg} mx-6 md:mx-0 md:mr-8 rounded-2xl md:w-80 min-h-56 md:min-h-0 shrink-0`}
               />
             )}
           </div>
@@ -101,8 +101,8 @@ export default function ProjectsSection() {
                 <div className="p-6 flex flex-col gap-4 flex-1">
                   <ProjectTags tags={project.tags} />
                   <div className="space-y-2">
-                    <h3 className="text-lg font-bold">{project.title}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <h3 className="text-2xl md:text-3xl font-medium">{project.title}</h3>
+                    <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                       {project.description}
                     </p>
                   </div>
@@ -115,12 +115,12 @@ export default function ProjectsSection() {
           </div>
 
           {/* Featured — full width, text left, image right */}
-          <div className="bg-card border border-border rounded-3xl overflow-hidden flex flex-col md:flex-row">
-            <div className="flex-1 p-8 flex flex-col justify-between gap-6">
+          <div className="bg-card border border-border p-4 md:p-8 rounded-3xl overflow-hidden flex flex-col md:flex-row">
+            <div className="flex-1 p-4 md:p-8 flex flex-col justify-between gap-6">
               <div className="space-y-4">
                 <ProjectTags tags={featured.tags} />
-                <h3 className="text-2xl font-bold">{featured.title}</h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <h3 className="text-2xl md:text-3xl font-medium">{featured.title}</h3>
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
                   {featured.description}
                 </p>
               </div>
@@ -129,18 +129,18 @@ export default function ProjectsSection() {
               </div>
             </div>
             {featured.image ? (
-              <div className="relative w-full md:w-96 min-h-64 md:min-h-0 shrink-0">
+              <div className="relative w-full bg-[#A2D6C0] md:mr-8 rounded-2xl z-10 md:w-96 min-h-56 md:h-96 shrink-0">
                 <Image
                   src={featured.image}
                   alt={featured.title}
                   fill
-                  sizes="(max-width: 768px) 100vw, 384px"
+                  sizes="(max-width: 480px) 100vw, 384px"
                   className="object-cover"
                 />
               </div>
             ) : (
               <div
-                className={`${featured.image_bg} w-full md:w-96 min-h-64 md:min-h-0 shrink-0`}
+                className={`${featured.image_bg} w-full md:w-96 rounded-2xl min-h-64 md:min-h-0 shrink-0`}
               />
             )}
           </div>

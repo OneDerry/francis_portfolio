@@ -7,7 +7,7 @@ export default function KeyExperiencesSection({
 }) {
   return (
     <section className="bg-background border-t border-border">
-      <div className="max-w-[90%] mx-auto px-6 py-20 space-y-10">
+      <div className="max-w-full md:max-w-[80%] mx-auto px-4 md:px-6 py-12 md:py-20 space-y-10">
         <p className="text-center text-xs font-semibold tracking-widest text-muted-foreground uppercase">
           Key Experiences
         </p>

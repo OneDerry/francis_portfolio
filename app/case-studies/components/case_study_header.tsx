@@ -12,7 +12,7 @@ export default function CaseStudyHeader({ meta }: { meta: CaseStudyMeta }) {
   ];
 
   return (
-    <div className="max-w-[90%] mx-auto px-6 pt-10 pb-16 space-y-10">
+    <div className="max-w-full md:max-w-[80%] mx-auto px-4 md:px-6 pt-6 md:pt-10 pb-10 md:pb-16 space-y-8 md:space-y-10">
       <Link
         href="/#projects"
         className="inline-flex items-center gap-1.5 text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -21,18 +21,20 @@ export default function CaseStudyHeader({ meta }: { meta: CaseStudyMeta }) {
         Back
       </Link>
 
-      <div className="space-y-6 max-w-3xl">
-        <p className="text-xs font-semibold tracking-widest text-muted-foreground uppercase">
-          Case Study
-        </p>
-        <h1 className="text-5xl md:text-6xl font-bold tracking-tight leading-tight">
-          {meta.title}
-        </h1>
-        <p className="text-base text-muted-foreground leading-relaxed">
-          {meta.description}
-        </p>
+      <div className="space-y-6">
+        <div className="max-w-6xl space-y-6">
+          <p className="text-xs font-semibold tracking-widest text-muted-foreground uppercase">
+            Case Study
+          </p>
+          <h1 className="text-3xl sm:text-4xl md:text-6xl font-medium tracking-tight leading-tight">
+            {meta.title}
+          </h1>
+          <p className="text-lg md:text-2xl text-muted-foreground max-w-5xl leading-tight">
+            {meta.description}
+          </p>
+        </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-6 border-t border-border">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-6">
           {cols.map(({ label, value }) => (
             <div key={label} className="space-y-1.5">
               <p className="text-[10px] font-semibold tracking-widest text-muted-foreground uppercase">
@@ -45,7 +47,7 @@ export default function CaseStudyHeader({ meta }: { meta: CaseStudyMeta }) {
       </div>
 
       {meta.hero_image ? (
-        <div className="relative w-full h-[480px] rounded-3xl overflow-hidden">
+        <div className="relative w-full h-56 sm:h-80 md:h-[480px] rounded-3xl overflow-hidden">
           <Image
             src={meta.hero_image}
             alt={meta.title}
@@ -57,7 +59,7 @@ export default function CaseStudyHeader({ meta }: { meta: CaseStudyMeta }) {
         </div>
       ) : (
         <div
-          className={`w-full h-[480px] rounded-3xl ${meta.hero_bg ?? "bg-muted"}`}
+          className={`w-full h-56 sm:h-80 md:h-[480px] rounded-3xl ${meta.hero_bg ?? "bg-muted"}`}
         />
       )}
     </div>

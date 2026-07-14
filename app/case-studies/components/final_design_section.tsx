@@ -15,7 +15,7 @@ export default function FinalDesignSection({
 }: Props) {
   return (
     <section className="bg-background border-t border-border">
-      <div className="max-w-[90%] mx-auto px-6 py-20 space-y-8">
+      <div className="max-w-full md:max-w-[80%] mx-auto px-4 md:px-6 py-12 md:py-20 space-y-8">
         <p className="text-xs font-semibold tracking-widest text-muted-foreground uppercase">
           Final Design
         </p>
